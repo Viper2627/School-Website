@@ -1,0 +1,37 @@
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/stylesheet/app.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<div class="container-fluid"style=" background:#ffefba
+;">
+<div class="jumbotron img-rounded" style="background:#f3a183; width: 100%;
+">
+  <h1 class="text-muted img-rounded">Gallery</h1>
+</div>
+
+<% if(files){ %>
+
+  <div class="row" >
+    <% files.forEach(function(file){
+      %>
+    <% if(file.isImage) { %>
+    <div class="col-md-3" style="margin:auto " >
+     <div class="thumbnail"style="width:27em; "> 
+          <img src="image/<%= file.filename %>"  class="img-rounded" alt="Cinque Terre" style="width:27em; height: 30em;display: inline-block; margin: auto;">
+         
+        </div>
+    </div>
+    <%}%>
+    <%})%>
+    
+
+    </div>
+   
+    
+    
+    
+    <% } %>
+  </div>

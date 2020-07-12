@@ -1,0 +1,67 @@
+<% infos.forEach(function(infos) {%>
+<style>
+    ::-webkit-scrollbar {
+      width: 7px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: red;
+      border-radius: 3px;
+    }
+</style>
+<div class="row" style="height: 100%; background: #41295a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;">
+    
+    <div class="col-lg-6 .col-sm-12">
+        <div class="container">
+        <div class="ji">
+            <h1 class="header " id="myHeader" style="font-size: 2vw; overflow: hidden;">Announcement 
+                 <a class="btn btn-primary" style="float: right"; button" href="/user">Add</a></h1>
+            </div>
+                <div class="scr border border-light">
+
+                <p class="pa" style="background:mintcream; font-size: 1.3vw;">
+                    <%= infos.inf %>  <%= infos.Created.toDateString() %></p>
+                   
+            </div>
+    </div>
+
+</div>
+    <div class="col-lg-6 .col-sm-12">
+       
+            <h1 class="anou" style="font-size: 2vw; overflow: hidden;;">Announcement 
+                 <a class="btn btn-primary" role="button" href="/user">Add</a></h1>
+                 <div class="scr">
+                <p class="pa" style="background:mintcream; font-size: 1.3vw;">
+                    ust use overflow: auto. Sin
+                <p class="pa"style="background: blanchedalmond ;">
+                    ust use overflow: auto. Since your content by default just breaks to the next line 
+                    when it cannot fit on the current line, a horizontal scrollbar won't be creat
+                    ed (unless it's on an element that has word-wrapping disabled). For the vertic
+                    al bar,it will allow the content to ex not exceed the height.
+                </p>
+                <p class="pa"style="background:mintcream; ;">
+                    ust use overflow: auto. Since your content by default just breaks to the next line 
+                    when it cannot fit on the current line, a horizontal scrollbar won't be creat
+                    ed (unless it's on an element that the height.
+                </p>
+                
+            </div>
+    </div>
+    </div>
+
+    
+  
+
+</div>
+
+<% }) %>

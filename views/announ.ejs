@@ -1,0 +1,17 @@
+<div class="container" >
+    <div class="ji" >
+        <h1 class="header " id="myHeader" style="font-size: 1.5vw; overflow: hidden;">Announcement 
+             <a class="btn btn-primary" style="float: right"; button" href="/user">
+              Add</a></h1>
+        </div>
+            <div class="scr border border-light">
+              <% infos.forEach(function(infos) {%>
+            <p class="pa" style="background:mintcream; font-size: 1vw; max-width: 100%; ">
+              <span class="badge badge-light" style="display: block; background-color: blanchedalmond; "><%= infos.Created.toDateString() %></span>
+                <%= infos.inf %>
+              
+               </p>
+            
+                <% }) %>
+        </div>
+</div>

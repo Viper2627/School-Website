@@ -1,0 +1,108 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/stylesheet/app.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+  
+  
+    .contain{
+        background-image: url("images/ab.png");
+        background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+    }
+.counter
+{
+    
+
+
+    text-align: center;
+}
+.student-p,.Year-p,.staff-p
+{ color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.counter-count
+{
+    font-size: 18px;
+    background-color: #00b3e7;
+    border-radius: 50%;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    line-height: 92px;
+    width: 92px;
+    height: 92px;
+    margin-top: 25px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+}
+
+.student-p,.Year-p,.staff-p
+{
+    font-size: 24px;
+
+    color: #ffffff;
+    line-height: 34px;
+}
+    
+</style>
+<div class="jumbotron jumbotron-fluid" style="background-color: cornsilk;">
+<div class="contain">
+<div class="counter">
+ 
+        <div class="row" style="font-size: 6em;">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="student">
+                    <p class="counter-count">5000</p>
+                    <p class="student-p">Employee</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="Year">
+                    <p class="counter-count">30</p>
+                    <p class="Year-p">Year of Expriences</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="Staff">
+                    <p class="counter-count">30</p>
+                    <p class="staff-p">Number of Staff</p>
+                </div>
+            </div>
+        </div>
+       <script>
+           $('.counter-count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 5000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            },
+            complete: function() {
+      var mathCount = this.count > settings.maxNumber ? settings.maxNumber + '+' : this.count;
+      thisElement.text(mathCount);
+    }
+        });
+    });
+       </script>

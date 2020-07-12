@@ -1,0 +1,4 @@
+app.locals.server = () =>{
+    
+    
+  }
