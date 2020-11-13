@@ -9,8 +9,8 @@ LocalStrategy = require("passport-local"),
 User        = require("./models/user"),
 MongoClient = require('mongodb').MongoClient,
 app         = express();
-var conn = mongoose.createConnection("mongodb+srv://ramesh:ramesh@cluster0.uz0za.mongodb.net/mainpage?retryWrites=true&w=majority");
-mongoose.connect("mongodb+srv://ramesh:ramesh@cluster0.uz0za.mongodb.net/mainpage?retryWrites=true&w=majority",{ 
+var conn = mongoose.createConnection("mongodb://localhost/mainpage");
+mongoose.connect("mongodb://localhost/mainpage",{ 
     useNewUrlParser: true,useUnifiedTopology: true });
  $ = require('jquery')
 app.use(express.static("public"));
@@ -43,7 +43,7 @@ conn.once('open', () => {
 
 // Create storage engine
 const storage = new GridFsStorage({
-  url:"mongodb+srv://ramesh:ramesh@cluster0.uz0za.mongodb.net/mainpage?retryWrites=true&w=majority" ,
+  url:"mongodb://localhost/mainpage" ,
   file: (req, file) => {
     return new Promise((resolve, reject) => {
         const filename = file.originalname;
