@@ -9,8 +9,8 @@ LocalStrategy = require("passport-local"),
 User        = require("./models/user"),
 MongoClient = require('mongodb').MongoClient,
 app         = express();
-var conn = mongoose.createConnection("mongodb://localhost/mainpage");
-mongoose.connect("mongodb://localhost/mainpage",{ 
+var conn = mongoose.createConnection("mongodb+srv://rg:rg@cluster0.dqjv7.mongodb.net/mainpage?retryWrites=true&w=majority");
+mongoose.connect("nodmongodb+srv://rg:rg@cluster0.dqjv7.mongodb.net/mainpage?retryWrites=true&w=majority",{ 
     useNewUrlParser: true,useUnifiedTopology: true });
  $ = require('jquery')
 app.use(express.static("public"));
@@ -301,11 +301,11 @@ app.get("/about",function(req,res){
 app.post("/download",function(req,res){
   const fs = require('fs');
   const MongoClient = require('mongodb').MongoClient;
-  const url = "mongodb+srv://ramesh:ramesh@cluster0.uz0za.mongodb.net/mainpage?retryWrites=true&w=majority";
+  const url = "mongodb+srv://rg:rg@cluster0.dqjv7.mongodb.net/mainpage?retryWrites=true&w=majority";
   const excel = require('exceljs');
    
   // Create a connection to the MongoDB database
-  MongoClient.connect("mongodb+srv://ramesh:ramesh@cluster0.uz0za.mongodb.net/mainpage?retryWrites=true&w=majority", { useNewUrlParser: true }, function(err, db) {
+  MongoClient.connect("mongodb+srv://rg:rg@cluster0.dqjv7.mongodb.net/mainpage?retryWrites=true&w=majority", { useNewUrlParser: true }, function(err, db) {
     if (err) throw err;
     
     let dbo = db.db("mainpage");
@@ -350,6 +350,7 @@ app.post("/download",function(req,res){
 
 // Start node server
 app.listen( app.get( 'port' ), function() {
-  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  console.log( 'Node server is running on port ' + app.get( 'port' ))
+  
   });
     
