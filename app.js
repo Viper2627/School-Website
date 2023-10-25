@@ -118,7 +118,7 @@ app.get("/info",function(req,res){
 app.post("/",function(req,res){
     info.create(req.body.infos,function(err,newindex){
         if(err){
-            consolde.log("failed");
+            console.log("failed");
         }
         else{
             res.redirect("/");
@@ -336,7 +336,7 @@ app.post("/download",function(req,res){
     worksheet.addRows(result);
     
     // Write to File
-    workbook.xlsx.writeFile("C:/Users/Personal/Documents/student.xlsx")
+    workbook.xlsx.writeFile("C:/Users/rames/Documents/student.xlsx")
       .then(function() {
   
       });
